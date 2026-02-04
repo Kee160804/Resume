@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyan McLaughlin | IT Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Modern Reset & Variables */
+        :root {
+            --primary: #0a192f;
+            --secondary: #112240;
+            --accent: #64ffda;
+            --accent-light: rgba(100, 255, 218, 0.1);
+            --text-primary: #e6f1ff;
+            --text-secondary: #8892b0;
+            --text-tertiary: #a8b2d1;
+            --card-bg: rgba(17, 34, 64, 0.7);
+            --border: rgba(100, 255, 218, 0.2);
+            --shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+            --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --container: 1200px;
+            --glass: rgba(10, 25, 47, 0.85);
+            --gradient: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gradient);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-attachment: fixed;
+        }
+
+        ::selection {
+            background-color: var(--accent-light);
+            color: var(--accent);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            background: linear-gradient(to right, #e6f1ff, #64ffda);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        h2:before {
+            content: '02.';
+            color: var(--accent);
+            font-family: 'SF Mono', monospace;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -50px;
+            top: -5px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--text-tertiary);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            background: var(--glass);
+            /* backdrop-filter: blur(10px); */
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--text-primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: var(--accent);
+        }
+
+        .nav-number {
+            color: var(--accent);
+            font-family: 'SF Mono', monospace;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--accent-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 5rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            color: var(--accent);
+            font-family: 'SF Mono', monospace;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero-title {
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+
+        .hero-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 1rem 1.8rem;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-light);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .cta-button:hover:before {
+            left: 0;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
+        }
+
+        /* Section Styling */
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            margin-right: 1rem;
+            margin-bottom: 0;
+        }
+
+        .section-line {
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border);
+            margin-left: 1rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-tertiary);
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-check {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        /* Cards */
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: var(--transition);
+            /* backdrop-filter: blur(10px); */
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 23px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--primary);
+            z-index: 1;
+        }
+
+        .timeline-date {
+            color: var(--accent);
+            font-family: 'SF Mono', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .timeline-content li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-tertiary);
+        }
+
+        .timeline-content li:before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-icon {
+            color: var(--accent);
+            font-size: 2rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: var(--text-secondary);
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .project-link:hover {
+            color: var(--accent);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin-top: auto;
+            padding-top: 1.5rem;
+        }
+
+        .tech-tag {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-family: 'SF Mono', monospace;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: var(--glass);
+            /* backdrop-filter: blur(10px); */
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-menu ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--accent);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Loading Bar */
+        .loading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--accent);
+            z-index: 1001;
+            transition: width 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            h2:before {
+                position: static;
+                margin-right: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline:before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 50px;
+            }
+            
+            .timeline-marker {
+                left: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 4rem 0;
+            }
+
+            .hero {
+                min-height: 90vh;
+            }
+
+            .glass-card {
+                padding: 1.5rem;
+            }
+            
+            h2 {
+                font-size: clamp(1.5rem, 4vw, 2rem);
+            }
+            
+            .hero h1 {
+                font-size: clamp(2rem, 6vw, 3rem);
+            }
+        }
+
+        /* Timeline Subtitle */
+        .timeline-subtitle {
+            color: var(--accent);
+            font-family: 'SF Mono', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Bar -->
+    <div class="loading-bar" id="loadingBar"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">K<span>M</span></a>
+            
+            <nav>
+                <ul id="desktopNav">
+                    <li><a href="#home" class="active"><span class="nav-number">01.</span> Home</a></li>
+                    <li><a href="#about"><span class="nav-number">02.</span> About</a></li>
+                    <li><a href="#experience"><span class="nav-number">03.</span> Experience</a></li>
+                    <li><a href="#projects"><span class="nav-number">04.</span> Projects</a></li>
+                    <li><a href="#contact"><span class="nav-number">05.</span> Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#home"><span class="nav-number">01.</span> Home</a></li>
+                <li><a href="#about"><span class="nav-number">02.</span> About</a></li>
+                <li><a href="#experience"><span class="nav-number">03.</span> Experience</a></li>
+                <li><a href="#projects"><span class="nav-number">04.</span> Projects</a></li>
+                <li><a href="#contact"><span class="nav-number">05.</span> Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle animate">Hi, my name is</span>
+                <h1 class="hero-title animate">Kyan McLaughlin.</h1>
+                <h1 class="hero-title animate" style="color: var(--text-secondary); margin-bottom: 1.5rem;">IT Professional & Problem Solver.</h1>
+                <p class="hero-description animate">
+                    A dedicated IT specialist with expertise in full-stack development, network troubleshooting, 
+                    and system administration. Currently building impactful solutions at 
+                    <span class="hero-highlight">Belize Water Services</span> while pursuing Computer Science.
+                </p>
+                <a href="#projects" class="cta-button animate">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm an IT professional with a strong passion for technology and problem-solving, 
+                        committed to continuous growth in the tech field. Currently working as an IT Helpdesk 
+                        Technician while contributing to software development projects.
+                    </p>
+                    <p>
+                        My technical journey includes expertise in both front-end and back-end technologies, 
+                        system administration, and network management. I thrive in environments that challenge 
+                        me to learn and adapt quickly.
+                    </p>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-check skill-check"></i>
+                            <span>Full-Stack Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check skill-check"></i>
+                            <span>Network Administration</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check skill-check"></i>
+                            <span>System Troubleshooting</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check skill-check"></i>
+                            <span>IT Support & Helpdesk</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check skill-check"></i>
+                            <span>Database Management</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check skill-check"></i>
+                            <span>Project Coordination</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="glass-card" style="height: 400px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center;">
+                            <div style="width: 200px; height: 200px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; border: 2px solid var(--accent);">
+                                <i class="fas fa-user" style="font-size: 4rem; color: var(--accent);"></i>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Profile Image Placeholder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" style="background: var(--secondary);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- BWS Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date">March 2025 - Present</div>
+                        <h3>IT Helpdesk Technician</h3>
+                        <span class="timeline-subtitle">Belize Water Services Limited</span>
+                        <ul>
+                            <li>Provide front-line IT support and troubleshoot hardware/software issues</li>
+                            <li>Configure and administer computing resources using Active Directory</li>
+                            <li>Support LAN/WAN infrastructure and telecommunications equipment</li>
+                            <li>Contribute to SMS webapp development using React, TypeScript, and PostgreSQL</li>
+                            <li>Manage IT assets and maintain accurate inventory records</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Alta Resources Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date">February 2023 - Present</div>
+                        <h3>IT Technician & Desktop Support Analyst I</h3>
+                        <span class="timeline-subtitle">Alta Resources</span>
+                        <ul>
+                            <li>Provide technical support and troubleshoot IT issues for end users</li>
+                            <li>Manage computer equipment inventory and perform network maintenance</li>
+                            <li>Utilize Active Directory for account management and software troubleshooting</li>
+                            <li>Support applications including Citrix, CrowdStrike, and Cisco VPN</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Previous Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date">Previous Experience</div>
+                        <h3>Customer Service & IT Roles</h3>
+                        <span class="timeline-subtitle">Various Companies</span>
+                        <ul>
+                            <li>Customer Service Representative at Alta Resources (7 months)</li>
+                            <li>Sales Agent / IT Assistant / Marketing Agent at Thrive BPO (3.5 months)</li>
+                            <li>Warehouse Attendant at Brothers Habet (4 months)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <i class="fas fa-sms project-icon"></i>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>SMS Management System</h3>
+                    <p>Full-stack web application for Belize Water Services to manage SMS communications with customers. Built with modern React and TypeScript architecture.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <i class="fas fa-network-wired project-icon"></i>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>Network Monitoring Dashboard</h3>
+                    <p>Real-time network monitoring tool with alert system and performance analytics. Features interactive visualizations and automated reporting.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">Chart.js</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <i class="fas fa-tools project-icon"></i>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>IT Asset Manager</h3>
+                    <p>Comprehensive system for tracking IT equipment, managing inventory, and generating maintenance schedules with barcode scanning capabilities.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">React</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div>
+                    <h3>Get In Touch</h3>
+                    <p>
+                        I'm currently open to new opportunities and interesting projects. 
+                        Whether you have a question or just want to connect, feel free to reach out.
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p style="color: var(--text-tertiary);">mclaughlinkyan04@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p style="color: var(--text-tertiary);">611-1904</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p style="color: var(--text-tertiary);">Belize City, Belize</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>References</h3>
+                    <div class="glass-card" style="margin-bottom: 1rem;">
+                        <h4>Stacy Sutherland</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0.5rem 0;">IT Director, St. John's Junior College</p>
+                        <p style="font-size: 0.9rem; color: var(--text-tertiary);">614-4110</p>
+                    </div>
+                    
+                    <div class="glass-card" style="margin-bottom: 1rem;">
+                        <h4>Juan Perez</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0.5rem 0;">IT Infrastructure Desktop Support Analyst</p>
+                        <p style="font-size: 0.9rem; color: var(--text-tertiary);">621-0644</p>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <h4>Allison McLaughlin</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0.5rem 0;">Commander, Tourism Police Unit</p>
+                        <p style="font-size: 0.9rem; color: var(--text-tertiary);">615-2621</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p>Designed & Built by Kyan McLaughlin</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">© 2025 All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modern Portfolio Script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const navLinks = document.querySelectorAll('nav a, .mobile-menu a');
+            const loadingBar = document.getElementById('loadingBar');
+            
+            // Initialize animations
+            initAnimations();
+            
+            // Mobile Menu Toggle
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Close mobile menu when clicking links
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+            
+            // Smooth scrolling with offset
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - headerHeight,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    updateActiveNavLink(targetId);
+                });
+            });
+            
+            // Scroll progress bar
+            window.addEventListener('scroll', () => {
+                // Progress bar
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                loadingBar.style.width = scrolled + "%";
+                
+                // Header background on scroll
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.backdropFilter = 'blur(15px)';
+                    header.style.backgroundColor = 'rgba(10, 25, 47, 0.95)';
+                } else {
+                    header.style.backdropFilter = 'blur(10px)';
+                    header.style.backgroundColor = 'var(--glass)';
+                }
+                
+                // Update active nav link on scroll
+                updateActiveNavLinkOnScroll();
+            });
+            
+            // Initialize typing effect for hero
+            initTypingEffect();
+            
+            // Add hover effect to glass cards
+            document.querySelectorAll('.glass-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Function to update active nav link
+            function updateActiveNavLink(targetId) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === targetId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Function to update active nav link on scroll
+            function updateActiveNavLinkOnScroll() {
+                const sections = document.querySelectorAll('section');
+                const scrollPos = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            // Function to initialize animations
+            function initAnimations() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate');
+                        }
+                    });
+                }, observerOptions);
+                
+                // Observe elements to animate
+                document.querySelectorAll('.hero-content > *').forEach(el => observer.observe(el));
+                document.querySelectorAll('.glass-card').forEach(el => observer.observe(el));
+                document.querySelectorAll('.timeline-item').forEach(el => observer.observe(el));
+                document.querySelectorAll('.contact-item').forEach(el => observer.observe(el));
+            }
+            
+            // Function for typing effect
+            function initTypingEffect() {
+                const heroTitle = document.querySelectorAll('.hero-title')[2];
+                if (!heroTitle) return;
+                
+                const text = heroTitle.textContent;
+                heroTitle.textContent = '';
+                
+                let i = 0;
+                const typeWriter = () => {
+                    if (i < text.length) {
+                        heroTitle.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 50);
+                    }
+                };
+                
+                // Start typing after a delay
+                setTimeout(typeWriter, 1000);
+            }
+            
+            // Add click effect to buttons
+            document.querySelectorAll('.cta-button, .social-link').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const x = e.clientX - this.getBoundingClientRect().left;
+                    const y = e.clientY - this.getBoundingClientRect().top;
+                    
+                    const ripple = document.createElement('span');
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple-effect');
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+            
+            // Add ripple effect style
+            const style = document.createElement('style');
+            style.textContent = `
+                .ripple-effect {
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(100, 255, 218, 0.3);
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    pointer-events: none;
+                }
+                
+                @keyframes ripple {
+                    to {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+                
+                .cta-button, .social-link {
+                    position: relative;
+                    overflow: hidden;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Set current year in footer
+            const yearSpan = document.querySelector('.copyright p:last-child');
+            if (yearSpan) {
+                yearSpan.textContent = `© ${new Date().getFullYear()} All rights reserved`;
+            }
+        });
+    </script>
+</body>
+</html>
