@@ -3,1288 +3,470 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Kyan McLaughlin - IT Professional portfolio showcasing experience in IT helpdesk, full-stack development, and system administration."
-    />
-    <title>Kyan McLaughlin | IT Professional</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="description" content="Portfolio of Kyan McLaughlin, an IT technician and junior software developer in Belize specializing in infrastructure support and enterprise web applications." />
+    <meta name="theme-color" content="#071a1f" />
+    <title>Kyan McLaughlin | IT Technician &amp; Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <!-- Header Component -->
-    <header>
-      <div class="container header-container">
-        <a href="#home" class="logo" aria-label="Home">K<span>M</span></a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-        <nav aria-label="Main navigation">
-          <ul id="desktopNav">
-            <li>
-              <a href="#home" class="active"
-                ><span class="nav-number">01.</span> Home</a
-              >
-            </li>
-            <li>
-              <a href="#about"><span class="nav-number">02.</span> About</a>
-            </li>
-            <li>
-              <a href="#experience"
-                ><span class="nav-number">03.</span> Experience</a
-              >
-            </li>
-            <li>
-              <a href="#education"
-                ><span class="nav-number">04.</span> Education</a
-              >
-            </li>
-            <li>
-              <a href="#skills"><span class="nav-number">05.</span> Skills</a>
-            </li>
-            <li>
-              <a href="#projects"
-                ><span class="nav-number">06.</span> Projects</a
-              >
-            </li>
-            <li>
-              <a href="#contact"><span class="nav-number">07.</span> Contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <button
-          class="mobile-menu-btn"
-          id="mobileMenuBtn"
-          aria-label="Toggle mobile menu"
-          aria-expanded="false"
-        >
-          <i class="fas fa-bars" aria-hidden="true"></i>
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Kyan McLaughlin home">
+          <span class="brand-mark">KM</span><span class="brand-name">Kyan McLaughlin</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation">
+          <span></span><span></span><span></span>
         </button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div
-        class="mobile-menu"
-        id="mobileMenu"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Mobile navigation menu"
-        hidden
-      >
-        <ul>
-          <li>
-            <a href="#home"><span class="nav-number">01.</span> Home</a>
-          </li>
-          <li>
-            <a href="#about"><span class="nav-number">02.</span> About</a>
-          </li>
-          <li>
-            <a href="#experience"
-              ><span class="nav-number">03.</span> Experience</a
-            >
-          </li>
-          <li>
-            <a href="#education"
-              ><span class="nav-number">04.</span> Education</a
-            >
-          </li>
-          <li>
-            <a href="#skills"><span class="nav-number">05.</span> Skills</a>
-          </li>
-          <li>
-            <a href="#projects"><span class="nav-number">06.</span> Projects</a>
-          </li>
-          <li>
-            <a href="#contact"><span class="nav-number">07.</span> Contact</a>
-          </li>
-        </ul>
+        <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+          <a href="#about">About</a><a href="#experience">Experience</a>
+          <a href="#projects">Projects</a><a href="#skills">Skills</a>
+          <a href="#education">Education</a><a class="nav-cta" href="#contact">Let's connect</a>
+        </nav>
       </div>
     </header>
 
-    <!-- Loading Bar -->
-    <div class="loading-bar" id="loadingBar"></div>
-    <!-- Home/Hero Component -->
-    <section id="home" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <span class="hero-subtitle animate">Hi, my name is</span>
-          <h1 class="hero-title animate">Kyan McLaughlin.</h1>
-          <h1 class="hero-title hero-subheading animate">
-            IT Professional & Web Developer.
-          </h1>
-          <p class="hero-description animate">
-            I am a motivated and dedicated IT professional with a strong passion
-            for technology and problem-solving, committed to continuous personal
-            and professional growth, and driven to excel in the IT field. A
-            proactive team player with excellent communication and leadership
-            skills, determined to contribute effectively to organizational
-            success. As an inspiring developer, I love bringing ideas both my
-            own and others to life through clean, functional, and meaningful
-            solutions. I enjoy transforming concepts into real, usable
-            experiences by combining creativity with technical problem-solving
-          </p>
-          <a href="#projects" class="cta-button animate">
-            <span>View My Work</span>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
+    <main id="main-content">
+      <section class="hero" id="home">
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span></span> Based in Belize City, Belize</p>
+            <h1>IT expertise.<br /><em>Software solutions.</em></h1>
+            <p class="hero-lead">I’m Kyan McLaughlin, an IT Technician and Software Developer who keeps people productive, systems reliable, and business ideas moving from concept to working software.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+              <a class="button button-secondary" href="assets/Kyan-McLaughlin-Resume.docx" download>Download résumé <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <aside class="hero-panel reveal" aria-label="Professional overview">
+            <div class="status-row"><span class="status-dot"></span> Open to meaningful opportunities</div>
+            <div class="hero-panel-body">
+              <p class="panel-kicker">Current focus</p>
+              <!-- <h2>Enterprise IT &amp; full-stack development</h2> -->
+               <h2>Software Engineer and Web development</h2>
+              <p>Supporting BWS operations while building secure internal tools with Next.js, .NET, SQL Server, PostgreSQL, and Active Directory.</p>
+            </div>
+            <div class="quick-stats">
+              <div><strong>5+</strong><span>Years as an IT Technician</span></div>
+              <div><strong>Software Dev Projects</strong><span>Web applications</span></div>
+              <div><strong>2</strong><span>IT disciplines</span></div>
+            </div>
+          </aside>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Component -->
-    <section id="about">
-      <div class="container">
-        <div class="section-title">
-            <span class="section-number">02.</span>
-          <h2>About Me</h2>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              I currently work as an IT Technician, where I support users,
-              troubleshoot systems, and gain hands-on experience in real-world
-              IT environments, while also contributing to software development
-              Team and the Teams projects.
-            </p>
-            <p>
-              My experience spans front-end and back-end development, Basic
-              system administration, and networking troubleshooting, allowing me
-              to approach problems from both a technical and practical
-              perspective. I enjoy fast-paced settings that push me to sharpen
-              my skills and grow beyond my comfort zone.
-            </p>
-
-            <div class="skills-grid">
-              <div class="skill-item">
-                <i class="fas fa-check skill-check" aria-hidden="true"></i>
-                <span>Web Development</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-check skill-check" aria-hidden="true"></i>
-                <span>Network Troubleshooting</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-check skill-check" aria-hidden="true"></i>
-                <span>System Troubleshooting</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-check skill-check" aria-hidden="true"></i>
-                <span>IT Support & Helpdesk</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-check skill-check" aria-hidden="true"></i>
-                <span>Active Directory</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-check skill-check" aria-hidden="true"></i>
-                <span>Project Coordination</span>
-              </div>
-            </div>
-          </div>
-          <div class="about-image">
-            <div class="glass-card profile-card">
-              <div class="profile-image-display">
-                <img
-                  src="https://scontent.ftza1-1.fna.fbcdn.net/v/t39.30808-6/472991048_1542741373108361_4391257153975418476_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_lkLbCJtpO4Q7kNvwENW9zy&_nc_oc=AdnpdtDPjo6MSozJGP9mGkE4bKh-rTefAXoBHZ1nvVou9oeL08gHxO6i8BsvJDITaTk&_nc_zt=23&_nc_ht=scontent.ftza1-1.fna&_nc_gid=mMSBrENVHAf8snLiwapY_g&oh=00_AftY09sAQGMQltoZ-IWKpywQqXI3BUA19POWTdVXRIntdw&oe=6986C033"
-                  alt="Kyan McLaughlin - IT Professional"
-                  class="profile-image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-      <div class="container">
-        <div class="section-title">
-             <span class="section-number">03.</span>
-          <h2>Experience</h2>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="timeline">
-          <!-- BWS Experience -->
-          <div class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content glass-card">
-              <div class="timeline-date">March 2025 - Present</div>
-              <h3>IT Helpdesk Technician</h3>
-              <span class="timeline-subtitle"
-                >Belize Water Services Limited</span
-              >
-
-              <ul class="experience-list">
-                <li>
-                  Provide front-line IT support to BWS staff and management,
-                  ensuring reliable systems and smooth daily operations.
-                </li>
-                <li>
-                  Configure, administer, and maintain computing resources using
-                  Active Directory.
-                </li>
-                <li>
-                  Diagnose and troubleshoot hardware, software, and network
-                  issues, resolving problems efficiently or escalating when
-                  necessary.
-                </li>
-                <li>
-                  Contribute to the development of the company’s SMS web
-                  application using React, TypeScript, and PostgreSQL.
-                </li>
-                <li>
-                  Install, configure, and administer hardware, software, and
-                  user accounts across the organization.
-                </li>
-                <li>
-                  Support and maintain LAN/WAN infrastructure under the guidance
-                  of the Network Administrator.
-                </li>
-                <li>
-                  Collaborate with the Software Development Team on the SMS web
-                  application, applying and strengthening both front-end and
-                  back-end development skills.
-                </li>
-                <li>
-                  Track and manage IT assets to maintain accurate hardware and
-                  software inventories.
-                </li>
-
-                <!-- Hidden additional details -->
-                <li class="additional-detail">
-                  Assist with network security monitoring and vulnerability
-                  assessments.
-                </li>
-                <li class="additional-detail">
-                  Collaborate with development teams on system integrations.
-                </li>
-                <li class="additional-detail">
-                  Document IT procedures and develop user guides for internal
-                  systems.
-                </li>
-                <li class="additional-detail">
-                  Participate in IT infrastructure planning and improvement
-                  meetings.
-                </li>
-                <li class="additional-detail">
-                  Provide training and support to staff on newly implemented
-                  software systems.
-                </li>
-                <li class="additional-detail">
-                  Working knowledge of Adobe Creative Suite.
-                </li>
-                <li class="additional-detail">
-                  Experience with Fortinet Client VPN.
-                </li>
-                <li class="additional-detail">
-                  Proficient with Microsoft tools including SharePoint, Power
-                  Apps, and related platforms.
-                </li>
-                <li class="additional-detail">
-                  Ensure proper documentation of helpdesk requests and follow up
-                  on ongoing issues to improve resolution times.
-                </li>
-                <li class="additional-detail">
-                  Perform PC and laptop repairs, including SSD installations and
-                  system upgrades.
-                </li>
-                <li class="additional-detail">
-                  Experience supporting Avaya phone systems.
-                </li>
-                <li class="additional-detail">
-                  Perform network troubleshooting and routine maintenance tasks.
-                </li>
-              </ul>
-
-              <button class="see-more-btn" data-id="experience1">
-                <span class="see-more-text">See More Details</span>
-                <i class="fas fa-chevron-down see-more-icon"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Alta Resources Experience -->
-          <div class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content glass-card">
-              <div class="timeline-date">February 2023 - Present</div>
-              <h3>IT Technician & Desktop Support Analyst I</h3>
-              <span class="timeline-subtitle">Alta Resources</span>
-
-              <ul class="experience-list">
-                <li>
-                  Provided front-line technical support to end users by
-                  diagnosing, troubleshooting, and resolving hardware, software,
-                  and network-related issues in a timely and professional
-                  manner.
-                </li>
-                <li>
-                  Assisted with IT projects aligned with organizational
-                  objectives, contributing to system upgrades, deployments, and
-                  process improvements.
-                </li>
-                <li>
-                  Managed the computer equipment lifecycle, including setup,
-                  configuration, inventory tracking, maintenance, and
-                  decommissioning of devices.
-                </li>
-                <li>
-                  Performed basic network maintenance and troubleshooting to
-                  ensure stable connectivity and minimal downtime.
-                </li>
-
-                <!-- Hidden additional details -->
-                <li class="additional-detail">
-                  Delivered application and software support for internal
-                  systems and third-party platforms to ensure smooth daily
-                  operations.
-                </li>
-                <li class="additional-detail">
-                  Utilized Active Directory to manage user accounts,
-                  permissions, password resets, and group policies.
-                </li>
-                <li class="additional-detail">
-                  Supported enterprise tools including Citrix, CrowdStrike
-                  Falcon Sensor, Cisco Secure Client VPN, and Nice CXOne to
-                  ensure secure and reliable access.
-                </li>
-                <li class="additional-detail">
-                  Maintained clear documentation of issues, resolutions, and
-                  procedures to improve support efficiency and knowledge
-                  sharing.
-                </li>
-              </ul>
-
-              <button class="see-more-btn" data-id="experience2">
-                <span class="see-more-text">See More Details</span>
-                <i class="fas fa-chevron-down see-more-icon"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Previous Experience -->
-          <div class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content glass-card">
-              <div class="timeline-date">Previous Experience</div>
-              <h3>Customer Service & IT Roles</h3>
-              <span class="timeline-subtitle">Various Companies</span>
-
-              <ul class="experience-list">
-                <li>
-                  Customer Service Representative – Alta Resources
-                  <span class="duration">(7 months)</span>
-                </li>
-                <li>
-                  Sales Agent / IT Assistant / Marketing Agent – Thrive BPO
-                  <span class="duration">(3.5 months)</span>
-                </li>
-                <li>
-                  Warehouse Attendant – Brothers Habet
-                  <span class="duration">(4 months)</span>
-                </li>
-
-                <!-- Customer Service Focus (Alta Resources) -->
-                <li class="additional-detail">
-                  Provided exceptional customer service and technical support to
-                  clients by addressing inquiries, troubleshooting issues, and
-                  delivering accurate product information.
-                </li>
-                <li class="additional-detail">
-                  Maintained high levels of customer satisfaction through
-                  proactive, solution-focused approaches to resolving concerns.
-                </li>
-                <li class="additional-detail">
-                  Responded to customer requests for products, services, and
-                  company information in a timely and professional manner.
-                </li>
-                <li class="additional-detail">
-                  Updated and maintained customer account information to ensure
-                  accurate records.
-                </li>
-                <li class="additional-detail">
-                  Tracked customer service cases and documented interactions
-                  within service management and CRM software.
-                </li>
-
-                <!-- Existing Additional Experience -->
-                <li class="additional-detail">
-                  Developed customer service protocols that improved response
-                  time by 30%.
-                </li>
-                <li class="additional-detail">
-                  Assisted in IT infrastructure setup for new office locations.
-                </li>
-                <li class="additional-detail">
-                  Trained new employees on CRM software and internal IT systems.
-                </li>
-                <li class="additional-detail">
-                  Managed inventory tracking systems and supported database
-                  maintenance.
-                </li>
-                <li class="additional-detail">
-                  Provided technical support for e-commerce platforms.
-                </li>
-              </ul>
-
-              <button class="see-more-btn" data-id="experience3">
-                <span class="see-more-text">See More Details</span>
-                <i class="fas fa-chevron-down see-more-icon"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education-section">
-      <div class="container">
-        <div class="section-title">
-             <span class="section-number">04.</span>
-          <h2>Education</h2>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-
-            <div class="timeline-content glass-card">
-              <div class="timeline-date">Certificate Achieved</div>
-              <h3>Global Digital Skills Award 2025/2026</h3>
-              <span class="timeline-subtitle"
-                >Web & Mobile Development (React)</span
-              >
-              <ul class="education-list">
-                <p>About Course</p>
-                <li>
-                  Learn professional web and mobile app development using React,
-                  React Native, and modern JavaScript. Create real-world
-                  applications.
-                </li>
-                <!-- Hidden additional details -->
-                <li class="additional-detail">
-                  Certification ID: <strong>GDS-2025-WMD-012</strong>
-                </li>
-                <li class="additional-detail">
-                  Date Earned: <strong>December 2025</strong>
-                </li>
-                <li class="additional-detail">
-                  <button
-                    class="view-certificate-btn"
-                    data-certificate="certificate1"
-                  >
-                    <i class="fas fa-eye"></i> View Certificate
-                  </button>
-                </li>
-              </ul>
-
-              <button class="see-more-btn" data-id="education1">
-                <span class="see-more-text">See Certificate Details</span>
-                <i class="fas fa-chevron-down see-more-icon"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Certificate Modal -->
-          <div
-            class="certificate-modal"
-            id="certificateModal"
-            aria-hidden="true"
-          >
-            <div class="modal-overlay" id="modalOverlay"></div>
-            <div class="modal-content">
-              <button
-                class="modal-close"
-                id="modalClose"
-                aria-label="Close certificate viewer"
-              >
-                <i class="fas fa-times"></i>
-              </button>
-              <div class="modal-header">
-                <h3>Global Digital Skills Award 2025/2026</h3>
-                <p class="modal-subtitle">Web & Mobile Development (React)</p>
-              </div>
-              <div class="modal-body">
-                <div class="certificate-image-container">
-                  <!-- FIXED: Using proper Google Drive direct link -->
-                  <img
-                    src="./images/certficicate Image.jpeg"
-                    alt="Global Digital Skills Award Certificate"
-                    class="certificate-full-image"
-                    id="certificateImage"
-                  />
-                  <div class="certificate-info">
-                    <p><strong>Certification ID:</strong> GDS-2025-WMD-012</p>
-                    <p><strong>Date Earned:</strong> December 2025</p>
-                    <p>
-                      <strong>Issuing Authority:</strong> Global Digital Skills
-                      Institute
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Galen University -->
-          <div class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content glass-card">
-              <div class="timeline-date">Currently Pursuing</div>
-              <h3>Bachelor's Degree in Computer Science</h3>
-              <span class="timeline-subtitle">Galen University</span>
-            </div>
-          </div>
-
-          <!-- Wesley Junior College -->
-          <div class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content glass-card">
-              <div class="timeline-date">Completed</div>
-              <h3>Associate Degree in Information Technology</h3>
-              <span class="timeline-subtitle">Wesley Junior College</span>
-            </div>
-          </div>
-
-          <!-- St. John's College Junior College -->
-          <div class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content glass-card">
-              <div class="timeline-date">2021 - 2022</div>
-              <h3>Associate Degree in Information Technology</h3>
-              <span class="timeline-subtitle"
-                >St. John's College Junior College</span
-              >
-            </div>
-          </div>
-
-          <!-- Toledo Community College -->
-          <div class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content glass-card">
-              <div class="timeline-date">2017 - 2021</div>
-              <h3>Diploma in Science Department</h3>
-              <span class="timeline-subtitle">Toledo Community College</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <div class="container">
-        <div class="section-title">
-             <span class="section-number">05.</span>
-          <h2>Skills</h2>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="skills-grid-main">
-          <!-- Technical Skills -->
-          <div class="skills-category glass-card">
-            <div class="skills-category-header">
-              <i class="fas fa-cogs category-icon"></i>
-              <h3>Technical Skills</h3>
-            </div>
-            <ul class="skills-list">
-              <li>
-                Hardware Installation, Repair, and troubleshooting (PC, Laptops,
-                Printers)
-              </li>
-              <li>Operating Systems: Windows, Linux, macOS</li>
-              <li>
-                Programming Languages: C++, HTML, CSS, JavaScript, GUI(Python),
-                TypeScript, Node.js, SQL, React
-              </li>
-              <li>
-                Network & Systems Management: Basic Network Troubleshooting &
-                Maintenance, VPN Knowledge
-              </li>
-              <li>Microsoft Office 365, SCCM, Intune, Citrix</li>
-              <li>LAN/WAN setup and troubleshooting</li>
-              <!-- Hidden additional technical skills -->
-              <li class="additional-skill">
-                Helpdesk & Ticketing Systems: Cherwell Ticketing System, Remote
-                Troubleshooting, SharePoint Ticketing System
-              </li>
-              <li class="additional-skill">
-                User Account Management (Active Directory / Local Users)
-              </li>
-              <li class="additional-skill">
-                Remote Support Tools: RDP, AnyDesk, TeamViewer
-              </li>
-              <li class="additional-skill">
-                Technical Documentation and Reporting
-              </li>
-              <li class="additional-skill">Inventory Tracking</li>
-              <li class="additional-skill">
-                IT Support & Troubleshooting: Desktop Support Analyst, PC Repair
-                & Maintenance
-              </li>
-              <li class="additional-skill">
-                Windows Active Directory, Software & Application Support
-              </li>
-              <li class="additional-skill">
-                Project & Inventory Management: Keeping inventory records,
-                managing IT equipment, and project coordination
-              </li>
-            </ul>
-            <button
-              class="see-more-btn skills-see-more"
-              data-id="technical-skills"
-            >
-              <span class="see-more-text">See More Technical Skills</span>
-              <i class="fas fa-chevron-down see-more-icon"></i>
-            </button>
-          </div>
-
-          <!-- Soft Skills -->
-          <div class="skills-category glass-card">
-            <div class="skills-category-header">
-              <i class="fas fa-users category-icon"></i>
-              <h3>Soft Skills</h3>
-            </div>
-            <ul class="skills-list">
-              <li>Strong analytical and problem-solving skills</li>
-              <li>Excellent communication and teamwork abilities</li>
-              <li>Leadership and project management experience</li>
-              <li>Customer service and marketing expertise</li>
-              <li>Ability to adapt and learn new technologies quickly</li>
-              <!-- Hidden additional soft skills -->
-              <li class="additional-skill">
-                Strong communication skills, especially when explaining
-                technical concepts to non-technical users
-              </li>
-              <li class="additional-skill">
-                Problem-solving mindset with ability to think critically under
-                pressure
-              </li>
-              <li class="additional-skill">
-                Team-oriented, with ability to collaborate effectively across
-                departments
-              </li>
-              <li class="additional-skill">
-                Time management and organization, able to handle multiple tasks
-                and priorities
-              </li>
-              <li class="additional-skill">
-                Adaptability and willingness to learn new technologies and
-                systems
-              </li>
-              <li class="additional-skill">
-                Patience and professionalism when providing technical support
-              </li>
-              <li class="additional-skill">
-                Attention to detail and commitment to quality work
-              </li>
-              <li class="additional-skill">
-                Reliability and accountability in meeting deadlines and
-                responsibilities
-              </li>
-            </ul>
-            <button class="see-more-btn skills-see-more" data-id="soft-skills">
-              <span class="see-more-text">See More Soft Skills</span>
-              <i class="fas fa-chevron-down see-more-icon"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <div class="section-title">
-             <span class="section-number">06.</span>
-          <h2>Projects</h2>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="projects-grid">
-          <!-- Project 1: SMS Management System -->
-          <div class="project-card glass-card">
-            <div class="project-image-carousel">
-              <div class="carousel-container" id="carousel1">
-                <!-- Carousel Images -->
-                <div class="carousel-slides">
-                  <div class="carousel-slide active">
-                    <img
-                      src="./images/sms-images/1.png"
-                      alt="SMS Dashboard Interface"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project1"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="./images/sms-images/2.png"
-                      alt="Database Schema"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project1"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="./images/sms-images/3.png"
-                      alt="Mobile Responsive Design"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project1"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="./images/sms-images/4.png"
-                      alt="Mobile Responsive Design"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project1"
-                    />
-                  </div>
-                </div>
-
-                <!-- Carousel Navigation -->
-                <button
-                  class="carousel-btn prev-btn"
-                  aria-label="Previous image"
-                >
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn" aria-label="Next image">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <!-- Dots Indicator -->
-                <div class="carousel-dots">
-                  <span class="dot active" data-slide="0"></span>
-                  <span class="dot" data-slide="1"></span>
-                  <span class="dot" data-slide="2"></span>
-                </div>
-
-                <!-- Image Counter -->
-                <div class="image-counter">
-                  <span class="current-slide">1</span> /
-                  <span class="total-slides">3</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-header">
-              <i class="fas fa-sms project-icon" aria-hidden="true"></i>
-              <div class="project-links">
-                <a
-                  href="https://github.com"
-                  class="project-link"
-                  aria-label="View SMS Management System on GitHub"
-                >
-                  <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-                <a
-                  href="#"
-                  class="project-link"
-                  aria-label="View live demo of SMS Management System"
-                >
-                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-            <h3>SMS Management System</h3>
-            <p>
-              Full-stack web application for Belize Water Services Limited to
-              manage SMS communications with customers. Built with modern React
-              and TypeScript architecture.
-            </p>
-            <p>Images Portray Mock Data.</p>
-            <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-            </div>
-          </div>
-
-          <!-- Project 2: Network Monitoring Dashboard -->
-          <div class="project-card glass-card">
-            <div class="project-image-carousel">
-              <div class="carousel-container" id="carousel2">
-                <div class="carousel-slides">
-                  <div class="carousel-slide active">
-                    <img
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Network Dashboard Overview"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project2"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Real-time Analytics"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project2"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Alert System Interface"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project2"
-                    />
-                  </div>
-                </div>
-
-                <button
-                  class="carousel-btn prev-btn"
-                  aria-label="Previous image"
-                >
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn" aria-label="Next image">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <div class="carousel-dots">
-                  <span class="dot active" data-slide="0"></span>
-                  <span class="dot" data-slide="1"></span>
-                  <span class="dot" data-slide="2"></span>
-                </div>
-
-                <div class="image-counter">
-                  <span class="current-slide">1</span> /
-                  <span class="total-slides">3</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-header">
-              <i
-                class="fas fa-network-wired project-icon"
-                aria-hidden="true"
-              ></i>
-              <div class="project-links">
-                <a
-                  href="https://github.com"
-                  class="project-link"
-                  aria-label="View Network Monitoring Dashboard on GitHub"
-                >
-                  <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-            <h3>Network Monitoring Dashboard</h3>
-            <p>
-              Real-time network monitoring tool with alert system and
-              performance analytics. Features interactive visualizations and
-              automated reporting.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Django</span>
-              <span class="tech-tag">Socket.io</span>
-              <span class="tech-tag">Chart.js</span>
-            </div>
-          </div>
-
-          <!-- Project 3: IT Asset Manager -->
-          <div class="project-card glass-card">
-            <div class="project-image-carousel">
-              <div class="carousel-container" id="carousel3">
-                <div class="carousel-slides">
-                  <div class="carousel-slide active">
-                    <img
-                      src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Asset Management Dashboard"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project3"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Barcode Scanning Interface"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project3"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Inventory Management"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project3"
-                    />
-                  </div>
-                </div>
-
-                <button
-                  class="carousel-btn prev-btn"
-                  aria-label="Previous image"
-                >
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn" aria-label="Next image">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <div class="carousel-dots">
-                  <span class="dot active" data-slide="0"></span>
-                  <span class="dot" data-slide="1"></span>
-                  <span class="dot" data-slide="2"></span>
-                </div>
-
-                <div class="image-counter">
-                  <span class="current-slide">1</span> /
-                  <span class="total-slides">3</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-header">
-              <i class="fas fa-tools project-icon" aria-hidden="true"></i>
-              <div class="project-links">
-                <a
-                  href="https://github.com"
-                  class="project-link"
-                  aria-label="View IT Asset Manager on GitHub"
-                >
-                  <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-            <h3>IT Asset Manager</h3>
-            <p>
-              Comprehensive system for tracking IT equipment, managing
-              inventory, and generating maintenance schedules with barcode
-              scanning capabilities.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">React</span>
-            </div>
-          </div>
-
-          <!-- Additional Projects (Hidden by Default) -->
-          <div class="project-card glass-card hidden-project">
-            <div class="project-image-carousel">
-              <div class="carousel-container" id="carousel4">
-                <div class="carousel-slides">
-                  <div class="carousel-slide active">
-                    <img
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="E-commerce Platform"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project4"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Product Catalog"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project4"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Shopping Cart"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project4"
-                    />
-                  </div>
-                </div>
-
-                <button
-                  class="carousel-btn prev-btn"
-                  aria-label="Previous image"
-                >
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn" aria-label="Next image">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <div class="carousel-dots">
-                  <span class="dot active" data-slide="0"></span>
-                  <span class="dot" data-slide="1"></span>
-                  <span class="dot" data-slide="2"></span>
-                </div>
-
-                <div class="image-counter">
-                  <span class="current-slide">1</span> /
-                  <span class="total-slides">3</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-header">
-              <i
-                class="fas fa-shopping-cart project-icon"
-                aria-hidden="true"
-              ></i>
-              <div class="project-links">
-                <a
-                  href="https://github.com"
-                  class="project-link"
-                  aria-label="View E-commerce Platform on GitHub"
-                >
-                  <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-            <h3>E-commerce Platform</h3>
-            <p>
-              Full-featured online shopping platform with payment integration,
-              inventory management, and customer analytics dashboard.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">Laravel</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Stripe API</span>
-            </div>
-          </div>
-
-          <div class="project-card glass-card hidden-project">
-            <div class="project-image-carousel">
-              <div class="carousel-container" id="carousel5">
-                <div class="carousel-slides">
-                  <div class="carousel-slide active">
-                    <img
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Task Management App"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project5"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Team Collaboration"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project5"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      alt="Progress Tracking"
-                      class="project-image lightbox-trigger"
-                      data-lightbox-group="project5"
-                    />
-                  </div>
-                </div>
-
-                <button
-                  class="carousel-btn prev-btn"
-                  aria-label="Previous image"
-                >
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn" aria-label="Next image">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <div class="carousel-dots">
-                  <span class="dot active" data-slide="0"></span>
-                  <span class="dot" data-slide="1"></span>
-                  <span class="dot" data-slide="2"></span>
-                </div>
-
-                <div class="image-counter">
-                  <span class="current-slide">1</span> /
-                  <span class="total-slides">3</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-header">
-              <i class="fas fa-tasks project-icon" aria-hidden="true"></i>
-              <div class="project-links">
-                <a
-                  href="https://github.com"
-                  class="project-link"
-                  aria-label="View Task Management App on GitHub"
-                >
-                  <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-            <h3>Task Management App</h3>
-            <p>
-              Collaborative project management tool with real-time updates, team
-              assignments, and progress tracking features.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Angular</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">RxJS</span>
-              <span class="tech-tag">Material UI</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- See More Projects Button -->
-        <div class="projects-more-container">
-          <button id="see-more-projects" class="btn btn-primary">
-            <span id="btn-text">See More Projects</span>
-            <i class="fas fa-chevron-down" id="btn-icon"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox-modal">
-      <div class="lightbox-content">
-        <button class="lightbox-close" aria-label="Close lightbox">
-          <i class="fas fa-times"></i>
-        </button>
-        <img id="lightbox-image" src="" alt="Project image" />
-        <div class="lightbox-caption"></div>
-        <button class="lightbox-prev" aria-label="Previous image">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="lightbox-next" aria-label="Next image">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Contact Component -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-title">
-             <span class="section-number">07.</span>
-          <h2>Contact</h2>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="contact-grid">
-          <div>
-            <h3>Get In Touch</h3>
-            <p>
-              I'm currently open to new opportunities and interesting projects.
-              Whether you have a question or just want to connect, feel free to
-              reach out.
-            </p>
-
-            <div class="contact-info">
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-envelope" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <h4>Email</h4>
-                  <p class="contact-detail">mclaughlinkyan04@gmail.com</p>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-phone" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <h4>Phone</h4>
-                  <p class="contact-detail">611-1904</p>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <h4>Location</h4>
-                  <p class="contact-detail">Belize City, Belize</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="references-section">
-            <h3>References</h3>
-            <div class="reference-card glass-card">
-              <h4>Stacy Sutherland</h4>
-              <p class="reference-title">
-                IT Director, St. John's Junior College
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="section-heading reveal"><p class="section-label">01 / About</p><h2>Practical support meets thoughtful development.</h2></div>
+          <div class="about-grid">
+            <figure class="portrait-wrap reveal">
+              <div class="portrait-frame"><img src="images/kyan-mclaughlin-original.png" alt="Kyan McLaughlin at his graduation" class="portrait" width="1536" height="2048" /></div>
+              <figcaption><span>IT Technician</span><span>Software Developer</span> <span>Web Developer</span></figcaption>
+            </figure>
+            <div class="about-copy reveal">
+              <p class="about-intro">
+                I am a motivated and dedicated IT professional with a strong
+                passion for technology and problem-solving, committed to
+                continuous personal and professional growth, and driven to
+                excel in the IT field. A proactive team player with excellent
+                communication and leadership skills, determined to contribute
+                effectively to organizational success.
               </p>
-              <p class="reference-contact">614-4110</p>
-            </div>
-
-            <div class="reference-card glass-card">
-              <h4>Juan Perez</h4>
-              <p class="reference-title">
-                IT Infrastructure Desktop Support Analyst
+              <p class="about-detail">
+                As a  Software and Web Developer, I love bringing ideas—both my
+                own and others—to life through clean, functional, and meaningful
+                solutions. I enjoy transforming concepts into real, usable
+                experiences by combining creativity with technical
+                problem-solving.
               </p>
-              <p class="reference-contact">621-0644</p>
-            </div>
-
-            <div class="reference-card glass-card">
-              <h4>Allison McLaughlin</h4>
-              <p class="reference-title">Commander, Tourism Police Unit</p>
-              <p class="reference-contact">615-2621</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer Component -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="social-links">
-            <a
-              href="https://linkedin.com"
-              class="social-link"
-              aria-label="Visit LinkedIn profile"
-            >
-              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-            </a>
-            <a
-              href="https://github.com"
-              class="social-link"
-              aria-label="Visit GitHub profile"
-            >
-              <i class="fab fa-github" aria-hidden="true"></i>
-            </a>
-            <a
-              href="https://twitter.com"
-              class="social-link"
-              aria-label="Visit Twitter profile"
-            >
-              <i class="fab fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a
-              href="https://codepen.io"
-              class="social-link"
-              aria-label="Visit CodePen profile"
-            >
-              <i class="fab fa-codepen" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="copyright">
-            <p>Designed & Built by Kyan McLaughlin</p>
-            <p class="copyright-year" id="copyrightYear"></p>
+      <section class="section experience" id="experience">
+        <div class="container">
+          <div class="section-heading split-heading reveal"><div><p class="section-label">02 / Experience</p><h2>Work that supports people and systems.</h2></div><p>Hands-on experience spanning helpdesk operations, endpoint support, infrastructure, and application development.</p></div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-meta"><time datetime="2025-03">Mar 2025 — Present</time><span>Belize City</span></div>
+              <div class="timeline-card">
+                <div class="role-header"><div><h3>IT Technician</h3><p>Belize Water Services Limited</p></div><span class="role-type">Current role</span></div>
+                <ul class="experience-list">
+                  <li>Provide front-line technical support to employees across the organization by diagnosing, troubleshooting, and resolving hardware, software, networking, and peripheral-related issues, ensuring minimal downtime and uninterrupted business operations.</li>
+                  <li>Install, configure, deploy, and maintain desktop computers, laptops, printers, scanners, and other IT equipment while ensuring systems remain secure, reliable, and fully operational.</li>
+                  <li>Perform preventative maintenance, hardware diagnostics, repairs, component replacements, and system upgrades to maximize equipment lifespan and improve overall system performance.</li>
+                  <li>Configure, deploy, and administer computing resources, including operating systems, enterprise software, user accounts, and workstation configurations in accordance with organizational IT standards.</li>
+                </ul>
+
+                <div class="experience-details" id="bwsExperienceDetails" hidden>
+                  <ul class="experience-list experience-list-continuation">
+                    <li>Assemble, image, configure, and deploy new computer systems for employees while ensuring proper software installation, licensing, security updates, and network connectivity.</li>
+                    <li>Support and maintain LAN/WAN infrastructure under the guidance of the Network Administrator by assisting with network troubleshooting, connectivity issues, VPN configuration, and infrastructure maintenance.</li>
+                    <li>Install, configure, troubleshoot, and maintain telecommunications equipment, ensuring reliable voice communication and minimizing service interruptions.</li>
+                    <li>Administer user accounts through Microsoft Active Directory by creating, modifying, unlocking, disabling, and managing user permissions while maintaining security and access control standards.</li>
+                    <li>Install, configure, and support Fortinet VPN Client to provide secure remote access for employees and troubleshoot connectivity and authentication issues.</li>
+                    <li>Provide technical support and administration for Avaya IP telephone systems, assisting with user configuration, troubleshooting, and maintenance.</li>
+                    <li>Utilize Microsoft technologies including Microsoft 365, SharePoint, and Power Apps to support business operations and improve productivity across departments.</li>
+                    <li>Perform hardware upgrades, including SSD installations, memory upgrades, operating system installations, and complete workstation rebuilds to improve system reliability and user performance.</li>
+                    <li>Maintain accurate IT asset inventory by tracking hardware, software licenses, equipment assignments, warranties, and lifecycle information to support effective asset management.</li>
+                    <li>Document support requests, technical solutions, and troubleshooting procedures within the organization's helpdesk system to improve knowledge sharing, service quality, and issue resolution times.</li>
+                    <li>Collaborate with infrastructure, networking, and software development teams to resolve complex technical issues while supporting ongoing IT initiatives and technology improvements.</li>
+                  </ul>
+
+                  <section class="development-experience" aria-labelledby="developmentExperienceTitle">
+                    <div class="experience-subheading">
+                      <p class="experience-kicker">Software Development Experience</p>
+                      <h4 id="developmentExperienceTitle">Projects completed with the BWS Software Development Team</h4>
+                    </div>
+
+                    <article class="experience-project">
+                      <div class="experience-project-heading"><div><span>Team Project</span><h5>BWSL SMS Web Application</h5></div><span class="project-status">Completed</span></div>
+                      <p>Collaborated with the Software Development Team to design, develop, and enhance the company's internal SMS web application. Participated in both frontend and backend development while gaining practical experience in modern full-stack application development, database integration, API design, and responsive user interface development.</p>
+                      <h6>Responsibilities</h6>
+                      <ul>
+                        <li>Developed and maintained frontend components using React, JavaScript, TypeScript, HTML5, CSS3, and Tailwind CSS.</li>
+                        <li>Assisted with backend API development and integration.</li>
+                        <li>Worked with PostgreSQL databases by creating, modifying, and querying data using SQL.</li>
+                        <li>Tested and validated API endpoints using Postman.</li>
+                        <li>Participated in debugging, testing, and implementing new application features.</li>
+                      </ul>
+                      <div class="tag-row"><span>JavaScript</span><span>TypeScript</span><span>React</span><span>HTML5</span><span>CSS3</span><span>Tailwind CSS</span><span>PostgreSQL</span><span>SQL</span><span>Postman</span><span>REST APIs</span></div>
+                    </article>
+
+                    <article class="experience-project">
+                      <div class="experience-project-heading"><div><span>Team Project</span><h5>BWSL Cheque Requisition Web Application</h5></div><span class="project-status">Completed</span></div>
+                      <p>Worked alongside the Software Development Team in developing the company's internal Cheque Requisition System, contributing to frontend development, backend services, authentication, database integration, and system functionality.</p>
+                      <h6>Responsibilities</h6>
+                      <ul>
+                        <li>Developed responsive user interfaces using Next.js and Tailwind CSS.</li>
+                        <li>Assisted in building backend REST API endpoints.</li>
+                        <li>Worked with PostgreSQL databases using DBeaver.</li>
+                        <li>Implemented LDAP authentication and Active Directory integration for secure user login.</li>
+                        <li>Participated in application testing, debugging, and feature enhancements.</li>
+                      </ul>
+                      <div class="tag-row"><span>Next.js</span><span>HTML5</span><span>CSS3</span><span>Tailwind CSS</span><span>PostgreSQL</span><span>DBeaver</span><span>REST APIs</span><span>LDAP Authentication</span></div>
+                    </article>
+
+                    <article class="experience-project">
+                      <div class="experience-project-heading"><div><span>Solo Project</span><h5>BWSL IT Maintenance Checklist System</h5></div><span class="project-status">Completed</span></div>
+                      <p>Designed, developed, and implemented a mobile-friendly web application to digitize the organization's IT preventative maintenance checklist, replacing paper-based processes with an efficient digital solution accessible from mobile devices.</p>
+                      <h6>Key Achievements</h6>
+                      <ul>
+                        <li>Independently designed the application's architecture, user interface, and database structure.</li>
+                        <li>Developed responsive frontend interfaces using Next.js and Tailwind CSS.</li>
+                        <li>Built backend REST API endpoints to manage checklist data and application functionality.</li>
+                        <li>Configured Microsoft SQL Server databases within Docker containers for development and testing.</li>
+                        <li>Implemented LDAP authentication to provide secure user login using Active Directory credentials.</li>
+                        <li>Managed database development and administration using DBeaver.</li>
+                        <li>Improved technician efficiency by creating a centralized digital maintenance system that reduced manual paperwork.</li>
+                      </ul>
+                      <div class="tag-row"><span>Next.js</span><span>HTML5</span><span>CSS3</span><span>Tailwind CSS</span><span>SQL Server</span><span>Docker</span><span>DBeaver</span><span>LDAP Authentication</span><span>REST APIs</span><span>.NET</span></div>
+                    </article>
+
+                    <!-- <article class="experience-project">
+                      <div class="experience-project-heading"><div><span>Solo Project</span><h5>BWSL Financial Ledger Portal</h5></div><span class="project-status project-status-active">In Development</span></div>
+                      <p>An enterprise-wide financial management platform being developed with .NET technologies. Designed to support departmental budgets, expenditure tracking, executive oversight, fiscal-year reporting, financial accountability, and auditing.</p>
+                      <h6>Responsibilities</h6>
+                      <ul>
+                        <li>Designing and developing responsive, professional user interfaces for departmental and executive financial dashboards.</li>
+                        <li>Building backend functionality to manage departmental budgets, financial transactions, expenditures, and fiscal-year records.</li>
+                        <li>Designing a centralized database structure to support financial data management across multiple departments and organizational levels.</li>
+                        <li>Planning LDAP authentication and Active Directory security group integration to enforce role-based access for employees, managers, executives, and administrators.</li>
+                        <li>Developing budget monitoring and reporting features to track spending, available balances, and departmental financial performance.</li>
+                        <li>Designing executive-level dashboards to provide consolidated financial insights and support organizational decision-making.</li>
+                        <li>Implementing financial accountability features, including expenditure tracking, audit trails, and reporting capabilities.</li>
+                        <li>Conducting application testing, debugging, and continuous feature enhancements throughout development.</li>
+                      </ul>
+                      <div class="tag-row"><span>.NET</span><span>C#</span><span>ASP.NET Core</span><span>SQL Server</span><span>HTML5</span><span>CSS3</span><span>REST APIs</span><span>LDAP Authentication</span><span>Active Directory</span><span>RBAC</span></div>
+                    </article> -->
+
+                    <article class="additional-development">
+                      <p class="experience-kicker">Additional Development Experience</p>
+                      <p>Throughout these software development projects, I further expanded my technical knowledge and gained practical experience with enterprise software development, backend technologies, authentication systems, and infrastructure configuration.</p>
+                      <h6>Technical Experience</h6>
+                      <ul>
+                        <li>Configured Prisma ORM for database connectivity and object-relational mapping.</li>
+                        <li>Implemented LDAP authentication with and without Active Directory Security Group authorization.</li>
+                        <li>Configured Docker containers and development environments for Microsoft SQL Server.</li>
+                        <li>Designed, developed, tested, and documented RESTful API endpoints.</li>
+                        <li>Developed application routing and navigation using Next.js.</li>
+                        <li>Configured and managed Microsoft SQL Server databases, including database creation, schema design, and data management.</li>
+                        <li>Worked with Git-based development workflows, debugging techniques, and collaborative software development practices.</li>
+                      </ul>
+                    </article>
+                  </section>
+                </div>
+
+                <div class="tag-row"><span>Active Directory</span><span>Microsoft 365</span><span>LAN/WAN</span><span>Fortinet</span><span>Asset management</span></div>
+                <button class="experience-toggle" type="button" aria-expanded="false" aria-controls="bwsExperienceDetails"><span>Read More</span><b aria-hidden="true">+</b></button>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-meta"><time datetime="2023-09">Sep 2023 — Feb 2025</time><span>Belize City</span></div>
+              <div class="timeline-card">
+                <div class="role-header"><div><h3>IT Technician &amp; Desktop Support Analyst I</h3><p>Alta Resources</p></div></div>
+                <ul class="experience-list">
+                  <li>Delivered first-line and second-line technical support to end users by diagnosing, troubleshooting, and resolving a wide range of hardware, software, operating system, and network-related issues, ensuring minimal disruption to business operations.</li>
+                  <li>Assisted in planning and executing IT projects, including workstation deployments, hardware refresh initiatives, software rollouts, and system upgrades, while ensuring alignment with organizational goals and IT best practices.</li>
+                  <li>Managed the complete lifecycle of IT assets, including procurement support, imaging, configuration, deployment, inventory management, preventative maintenance, repairs, upgrades, and secure decommissioning of desktop computers, laptops, peripherals, and mobile devices.</li>
+                  <li>Performed routine network diagnostics and basic infrastructure troubleshooting, identifying and resolving connectivity issues involving LAN/WAN environments, VPN access, network printers, and shared resources to maintain stable and reliable business operations.</li>
+                </ul>
+
+                <div class="experience-details" id="altaExperienceDetails" hidden>
+                  <ul class="experience-list experience-list-continuation">
+                    <li>Installed, configured, maintained, and supported enterprise applications and third-party software platforms, ensuring users had secure, reliable, and uninterrupted access to business-critical systems.</li>
+                    <li>Administered user accounts and security permissions through Microsoft Active Directory, including account creation, password resets, account unlocks, group membership management, and basic Group Policy administration while maintaining compliance with organizational security standards.</li>
+                    <li>Supported enterprise technologies including Citrix Virtual Apps, CrowdStrike Falcon Sensor, Cisco Secure Client VPN, and NICE CXone, assisting users with installation, configuration, authentication, troubleshooting, and secure remote connectivity.</li>
+                    <li>Utilized remote support tools to efficiently diagnose and resolve technical issues for both onsite and remote users, minimizing downtime and improving overall service delivery.</li>
+                    <li>Maintained detailed technical documentation, knowledge base articles, and incident records within the organization's helpdesk system, contributing to improved issue resolution times, standardized troubleshooting procedures, and knowledge sharing across the IT team.</li>
+                    <li>Collaborated closely with infrastructure engineers, system administrators, and business stakeholders to resolve escalated technical issues, implement technology improvements, and deliver high-quality IT services across the organization.</li>
+                    <li>Demonstrated a strong commitment to customer service by communicating technical concepts clearly to non-technical users, managing support requests professionally, and consistently meeting service level expectations.</li>
+                  </ul>
+                </div>
+
+                <div class="tag-row"><span>Citrix</span><span>CrowdStrike</span><span>Cisco VPN</span><span>NICE CXone</span><span>Remote support</span></div>
+                <button class="experience-toggle" type="button" aria-expanded="false" aria-controls="altaExperienceDetails"><span>Read More</span><b aria-hidden="true">+</b></button>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </footer>
+      </section>
 
-    <script src="main.js"></script>
+      <section class="section projects" id="projects">
+        <div class="container">
+          <div class="section-heading split-heading reveal"><div><p class="section-label">03 / Projects</p><h2>Professional work and independent builds.</h2></div><p>A focused collection of enterprise applications and personal projects, with compact details and expandable visuals.</p></div>
+
+          <section class="project-collection reveal" aria-labelledby="professionalProjectsTitle">
+            <div class="project-collection-heading">
+              <div><p>Workplace solutions</p><h3 id="professionalProjectsTitle">Professional Projects</h3></div>
+              <span>03 projects</span>
+            </div>
+
+            <div class="project-collection-grid">
+              <article class="compact-project-card project-card-media">
+                <div class="project-carousel" data-carousel data-interval="4500" aria-label="BWSL SMS application screenshots">
+                  <div class="carousel-track">
+                    <button class="carousel-slide active" type="button" data-lightbox="images/sms-images/1.png" data-lightbox-gallery="sms-project" data-caption="BWSL SMS application — Messages" aria-label="Enlarge SMS application screenshot 1">
+                      <img src="images/sms-images/1.png" alt="BWSL SMS application messages screen" />
+                    </button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/sms-images/2.png" data-lightbox-gallery="sms-project" data-caption="BWSL SMS application — Templates" aria-label="Enlarge SMS application screenshot 2">
+                      <img src="images/sms-images/2.png" alt="BWSL SMS application templates screen" loading="lazy" />
+                    </button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/sms-images/3.png" data-lightbox-gallery="sms-project" data-caption="BWSL SMS application — Message workflow" aria-label="Enlarge SMS application screenshot 3">
+                      <img src="images/sms-images/3.png" alt="BWSL SMS application message workflow" loading="lazy" />
+                    </button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/sms-images/4.png" data-lightbox-gallery="sms-project" data-caption="BWSL SMS application — Administration" aria-label="Enlarge SMS application screenshot 4">
+                      <img src="images/sms-images/4.png" alt="BWSL SMS application administration screen" loading="lazy" />
+                    </button>
+                  </div>
+                  <div class="carousel-toolbar">
+                    <div class="carousel-dots" aria-label="Choose screenshot"></div>
+                    <div class="carousel-buttons">
+                      <button type="button" data-carousel-prev aria-label="Previous screenshot">←</button>
+                      <button type="button" data-carousel-next aria-label="Next screenshot">→</button>
+                    </div>
+                  </div>
+                  <span class="enlarge-hint">Click image to enlarge</span>
+                </div>
+                <div class="compact-project-content">
+                  <p class="project-type">Team Project / 01</p>
+                  <h4>BWSL SMS Web Application</h4>
+                  <p>Internal messaging platform with responsive interfaces, backend integration, database workflows, endpoint testing, and feature development.</p>
+                  <div class="tech-list"><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>REST APIs</span></div>
+                </div>
+              </article>
+
+              <article class="compact-project-card project-card-media">
+                <div class="project-carousel" data-carousel data-interval="5200" aria-label="Cheque Requisition project images">
+                  <div class="carousel-track">
+                    <button class="carousel-slide active" type="button" data-lightbox="images/cheque-requisition/public/01-login-redacted.png" data-lightbox-gallery="cheque-project" data-caption="Cheque Requisition — secure sign-in" aria-label="Enlarge Cheque Requisition sign-in image"><img src="images/cheque-requisition/public/01-login-redacted.png" alt="Redacted Cheque Requisition sign-in screen" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/cheque-requisition/public/02-create-redacted.png" data-lightbox-gallery="cheque-project" data-caption="Cheque Requisition — create requisition" aria-label="Enlarge create requisition image"><img src="images/cheque-requisition/public/02-create-redacted.png" alt="Redacted create requisition screen" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/cheque-requisition/public/03-search-redacted.png" data-lightbox-gallery="cheque-project" data-caption="Cheque Requisition — search and review" aria-label="Enlarge requisition search image"><img src="images/cheque-requisition/public/03-search-redacted.png" alt="Redacted requisition search and review screen" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/cheque-requisition/public/04-vendors-redacted.png" data-lightbox-gallery="cheque-project" data-caption="Cheque Requisition — vendor management" aria-label="Enlarge vendor management image"><img src="images/cheque-requisition/public/04-vendors-redacted.png" alt="Redacted vendor management screen" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/cheque-requisition/public/05-payments-redacted.png" data-lightbox-gallery="cheque-project" data-caption="Cheque Requisition — payment files" aria-label="Enlarge payment files image"><img src="images/cheque-requisition/public/05-payments-redacted.png" alt="Redacted payment files screen" loading="lazy" /></button>
+                  </div>
+                  <div class="carousel-toolbar"><div class="carousel-dots" aria-label="Choose project image"></div><div class="carousel-buttons"><button type="button" data-carousel-prev aria-label="Previous image">←</button><button type="button" data-carousel-next aria-label="Next image">→</button></div></div>
+                  <span class="enlarge-hint">Click image to enlarge</span>
+                </div>
+                <div class="compact-project-content">
+                  <p class="project-type">Team Project / 02</p>
+                  <h4>Cheque Requisition System</h4>
+                  <p>Internal requisition workflow with responsive interfaces, backend services, PostgreSQL, and secure LDAP/Active Directory login.</p>
+                  <div class="tech-list"><span>Next.js</span><span>PostgreSQL</span><span>LDAP</span><span>Tailwind CSS</span></div>
+                </div>
+              </article>
+
+              <article class="compact-project-card project-card-media">
+                <div class="project-carousel" data-carousel data-interval="4900" aria-label="IT Maintenance Checklist project images">
+                  <div class="carousel-track">
+                    <button class="carousel-slide active" type="button" data-lightbox="images/maintenance-checklist/public/01-login-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — secure sign-in" aria-label="Enlarge maintenance sign-in image"><img src="images/maintenance-checklist/public/01-login-redacted.png" alt="Redacted IT Maintenance sign-in screen" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/maintenance-checklist/public/02-dashboard-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — technician workspace" aria-label="Enlarge maintenance dashboard image"><img src="images/maintenance-checklist/public/02-dashboard-redacted.png" alt="Redacted IT Maintenance dashboard" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/maintenance-checklist/public/03-checklist-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — digital checklist" aria-label="Enlarge digital checklist image"><img src="images/maintenance-checklist/public/03-checklist-redacted.png" alt="Redacted digital maintenance checklist" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/maintenance-checklist/public/04-register-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — asset register" aria-label="Enlarge asset register image"><img src="images/maintenance-checklist/public/04-register-redacted.png" alt="Redacted IT asset register" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/maintenance-checklist/public/05-decommission-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — device decommissioning" aria-label="Enlarge device decommission image"><img src="images/maintenance-checklist/public/05-decommission-redacted.png" alt="Redacted device decommission screen" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/maintenance-checklist/public/06-admin-dashboard-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — administration workspace" aria-label="Enlarge administration workspace image"><img src="images/maintenance-checklist/public/06-admin-dashboard-redacted.png" alt="Redacted administration workspace" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/maintenance-checklist/public/07-checklist-editor-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — checklist editor" aria-label="Enlarge checklist editor image"><img src="images/maintenance-checklist/public/07-checklist-editor-redacted.png" alt="Redacted checklist editor screen" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/maintenance-checklist/public/08-register-editor-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — register editor" aria-label="Enlarge register editor image"><img src="images/maintenance-checklist/public/08-register-editor-redacted.png" alt="Redacted register editor screen" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/maintenance-checklist/public/09-submissions-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — submissions review" aria-label="Enlarge submissions review image"><img src="images/maintenance-checklist/public/09-submissions-redacted.png" alt="Redacted submissions review screen" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/maintenance-checklist/public/10-branches-redacted.png" data-lightbox-gallery="maintenance-project" data-caption="IT Maintenance — branch settings" aria-label="Enlarge branch settings image"><img src="images/maintenance-checklist/public/10-branches-redacted.png" alt="Redacted branch settings screen" loading="lazy" /></button>
+                  </div>
+                  <div class="carousel-toolbar"><div class="carousel-dots" aria-label="Choose project image"></div><div class="carousel-buttons"><button type="button" data-carousel-prev aria-label="Previous image">←</button><button type="button" data-carousel-next aria-label="Next image">→</button></div></div>
+                  <span class="enlarge-hint">Click image to enlarge</span>
+                </div>
+                <div class="compact-project-content">
+                  <p class="project-type">Solo Project / 03</p>
+                  <h4>IT Maintenance Checklist</h4>
+                  <p>Mobile-first preventative-maintenance system that centralizes checklist data and replaces paper-based technician workflows.</p>
+                  <div class="tech-list"><span>Next.js</span><span>SQL Server</span><span>Docker</span><span>LDAP</span></div>
+                </div>
+              </article>
+
+              <!-- <article class="compact-project-card">
+                <div class="project-monogram project-monogram-active" aria-hidden="true">FL</div>
+                <div class="compact-project-content">
+                  <p class="project-type">Solo Project / 04 · In Development</p>
+                  <h4>BWSL Financial Ledger Portal</h4>
+                  <p>Enterprise financial platform for budgets, expenditure tracking, reporting, audit trails, executive dashboards, and role-based access.</p>
+                  <div class="tech-list"><span>.NET</span><span>C#</span><span>SQL Server</span><span>RBAC</span></div>
+                </div>
+              </article> -->
+            </div>
+          </section>
+
+          <section class="project-collection project-collection-personal reveal" aria-labelledby="personalProjectsTitle">
+            <div class="project-collection-heading">
+              <div><p>Independent builds</p><h3 id="personalProjectsTitle">Personal Projects</h3></div>
+              <span>03 projects</span>
+            </div>
+
+            <div class="project-collection-grid">
+              <article class="compact-project-card project-card-media">
+                <div class="project-carousel" data-carousel data-interval="4600" aria-label="YuhBusiness project images">
+                  <div class="carousel-track">
+                    <button class="carousel-slide active" type="button" data-lightbox="images/yuhbusiness/Screenshot%202026-10-13%20022300.png" data-lightbox-gallery="yuhbusiness-project" data-caption="YuhBusiness project screen 1" aria-label="Enlarge YuhBusiness project image 1"><img src="images/yuhbusiness/Screenshot%202026-10-13%20022300.png" alt="YuhBusiness application screenshot 1" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/yuhbusiness/Screenshot%202026-10-13%20022342.png" data-lightbox-gallery="yuhbusiness-project" data-caption="YuhBusiness project screen 2" aria-label="Enlarge YuhBusiness project image 2"><img src="images/yuhbusiness/Screenshot%202026-10-13%20022342.png" alt="YuhBusiness application screenshot 2" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/yuhbusiness/Screenshot%202026-10-13%20022406.png" data-lightbox-gallery="yuhbusiness-project" data-caption="YuhBusiness project screen 3" aria-label="Enlarge YuhBusiness project image 3"><img src="images/yuhbusiness/Screenshot%202026-10-13%20022406.png" alt="YuhBusiness application screenshot 3" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/yuhbusiness/Screenshot%202026-10-13%20022430.png" data-lightbox-gallery="yuhbusiness-project" data-caption="YuhBusiness project screen 4" aria-label="Enlarge YuhBusiness project image 4"><img src="images/yuhbusiness/Screenshot%202026-10-13%20022430.png" alt="YuhBusiness application screenshot 4" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/yuhbusiness/Screenshot%202026-10-13%20022516.png" data-lightbox-gallery="yuhbusiness-project" data-caption="YuhBusiness project screen 5" aria-label="Enlarge YuhBusiness project image 5"><img src="images/yuhbusiness/Screenshot%202026-10-13%20022516.png" alt="YuhBusiness application screenshot 5" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/yuhbusiness/Screenshot%202026-10-13%20022544.png" data-lightbox-gallery="yuhbusiness-project" data-caption="YuhBusiness project screen 6" aria-label="Enlarge YuhBusiness project image 6"><img src="images/yuhbusiness/Screenshot%202026-10-13%20022544.png" alt="YuhBusiness application screenshot 6" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/yuhbusiness/Screenshot%202026-10-13%20022605.png" data-lightbox-gallery="yuhbusiness-project" data-caption="YuhBusiness project screen 7" aria-label="Enlarge YuhBusiness project image 7"><img src="images/yuhbusiness/Screenshot%202026-10-13%20022605.png" alt="YuhBusiness application screenshot 7" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/yuhbusiness/Screenshot%202026-10-13%20022626.png" data-lightbox-gallery="yuhbusiness-project" data-caption="YuhBusiness project screen 8" aria-label="Enlarge YuhBusiness project image 8"><img src="images/yuhbusiness/Screenshot%202026-10-13%20022626.png" alt="YuhBusiness application screenshot 8" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="images/yuhbusiness/Screenshot%202026-10-13%20022648.png" data-lightbox-gallery="yuhbusiness-project" data-caption="YuhBusiness project screen 9" aria-label="Enlarge YuhBusiness project image 9"><img src="images/yuhbusiness/Screenshot%202026-10-13%20022648.png" alt="YuhBusiness application screenshot 9" loading="lazy" /></button>
+                  </div>
+                  <div class="carousel-toolbar"><div class="carousel-dots" aria-label="Choose project image"></div><div class="carousel-buttons"><button type="button" data-carousel-prev aria-label="Previous image">←</button><button type="button" data-carousel-next aria-label="Next image">→</button></div></div>
+                  <span class="enlarge-hint">Click image to enlarge</span>
+                </div>
+                <div class="compact-project-content">
+                  <p class="project-type">Personal Project / 01</p>
+                  <h4>YuhBusiness — Multi-Tenant SaaS Platform</h4>
+                  <p>A comprehensive multi-tenant SaaS platform designed to help businesses establish an online presence,
+                     manage appointments, sell products, process orders,
+                     and streamline daily operations through customizable digital storefronts and centralized management dashboards.</p>
+                  <div class="tech-list"><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Supabase</span>
+                  <span>PostgreSQL</span><span>Vercel</span><span>PWA</span></div>
+                </div>
+              </article>
+
+              <article class="compact-project-card project-card-media">
+                <!-- <div class="project-carousel" data-carousel data-interval="5100" aria-label="BelGlow project images">
+                  <div class="carousel-track">
+                    <button class="carousel-slide active" type="button" data-lightbox="https://picsum.photos/seed/belglow-marketplace-1/1200/675" data-lightbox-gallery="belglow-project" data-caption="Temporary BelGlow placeholder 1" aria-label="Enlarge temporary BelGlow image 1"><img src="https://picsum.photos/seed/belglow-marketplace-1/1200/675" alt="Temporary placeholder for the BelGlow project" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="https://picsum.photos/seed/belglow-marketplace-2/1200/675" data-lightbox-gallery="belglow-project" data-caption="Temporary BelGlow placeholder 2" aria-label="Enlarge temporary BelGlow image 2"><img src="https://picsum.photos/seed/belglow-marketplace-2/1200/675" alt="Temporary placeholder for the BelGlow project" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="https://picsum.photos/seed/belglow-marketplace-3/1200/675" data-lightbox-gallery="belglow-project" data-caption="Temporary BelGlow placeholder 3" aria-label="Enlarge temporary BelGlow image 3"><img src="https://picsum.photos/seed/belglow-marketplace-3/1200/675" alt="Temporary placeholder for the BelGlow project" loading="lazy" /></button>
+                  </div>
+                  <div class="carousel-toolbar"><div class="carousel-dots" aria-label="Choose project image"></div><div class="carousel-buttons"><button type="button" data-carousel-prev aria-label="Previous image">←</button><button type="button" data-carousel-next aria-label="Next image">→</button></div></div>
+                  <span class="enlarge-hint temporary-hint">Temporary images · click to enlarge</span>
+                </div> -->
+                <div class="compact-project-content">
+                  <p class="project-type">Personal Project / 02</p>
+                  <h4>BelGlow — Beauty E-Commerce Marketplace</h4>
+                  <p>A modern beauty and skincare marketplace designed to connect customers with independent sellers through a unified shopping platform. 
+                    Features seller storefronts, product listings, image galleries,
+                     inventory management, and a commission-based marketplace model with premium seller capabilities under development.</p>
+                  <div class="tech-list"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Tailwind CSS</span>
+                  <span>Supabase</span><span> Vercel</span><span>PWA</span></div>
+                </div>
+              </article>
+
+              <!-- <article class="compact-project-card project-card-media">
+                <div class="project-carousel" data-carousel data-interval="5400" aria-label="IT Asset Manager project images">
+                  <div class="carousel-track">
+                    <button class="carousel-slide active" type="button" data-lightbox="https://picsum.photos/seed/it-asset-manager-1/1200/675" data-lightbox-gallery="asset-manager-project" data-caption="Temporary IT Asset Manager placeholder 1" aria-label="Enlarge temporary IT Asset Manager image 1"><img src="https://picsum.photos/seed/it-asset-manager-1/1200/675" alt="Temporary placeholder for the IT Asset Manager project" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="https://picsum.photos/seed/it-asset-manager-2/1200/675" data-lightbox-gallery="asset-manager-project" data-caption="Temporary IT Asset Manager placeholder 2" aria-label="Enlarge temporary IT Asset Manager image 2"><img src="https://picsum.photos/seed/it-asset-manager-2/1200/675" alt="Temporary placeholder for the IT Asset Manager project" loading="lazy" /></button>
+                    <button class="carousel-slide" type="button" data-lightbox="https://picsum.photos/seed/it-asset-manager-3/1200/675" data-lightbox-gallery="asset-manager-project" data-caption="Temporary IT Asset Manager placeholder 3" aria-label="Enlarge temporary IT Asset Manager image 3"><img src="https://picsum.photos/seed/it-asset-manager-3/1200/675" alt="Temporary placeholder for the IT Asset Manager project" loading="lazy" /></button>
+                  </div>
+                  <div class="carousel-toolbar"><div class="carousel-dots" aria-label="Choose project image"></div><div class="carousel-buttons"><button type="button" data-carousel-prev aria-label="Previous image">←</button><button type="button" data-carousel-next aria-label="Next image">→</button></div></div>
+                  <span class="enlarge-hint temporary-hint">Temporary images · click to enlarge</span>
+                </div>
+                <div class="compact-project-content">
+                  <p class="project-type">Personal Project / 03</p>
+                  <h4>IT Asset Manager</h4>
+                  <p>Equipment and inventory tracking system with maintenance scheduling and barcode-scanning capabilities.</p>
+                  <div class="tech-list"><span>JavaScript</span><span>Express</span><span>MongoDB</span><span>React</span></div>
+                </div>
+              </article> -->
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="container skills-layout">
+          <div class="section-heading sticky-heading reveal"><p class="section-label">04 / Capabilities</p><h2>A balanced technical toolkit.</h2><p>Support knowledge grounded in everyday operations, with growing full-stack experience across modern enterprise technologies.</p></div>
+          <div class="skill-groups">
+            <article class="skill-group reveal"><span class="skill-index">01</span><div><h3>IT Support &amp; Infrastructure</h3><p>Hardware diagnostics, Windows/Linux/macOS support, system imaging, deployments, preventative maintenance, Microsoft 365, SCCM, Intune, Citrix, and endpoint troubleshooting.</p></div></article>
+            <article class="skill-group reveal"><span class="skill-index">02</span><div><h3>Networks &amp; Identity</h3><p>LAN/WAN troubleshooting, VPN configuration, Active Directory administration, LDAP authentication, security groups, permissions, and role-based access control.</p></div></article>
+            <article class="skill-group reveal"><span class="skill-index">03</span><div><h3>Software Development</h3><p>JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, C#, .NET, ASP.NET Core, HTML5, CSS3, Python, and C++.</p></div></article>
+            <article class="skill-group reveal"><span class="skill-index">04</span><div><h3>Data &amp; Developer Tools</h3><p>PostgreSQL, Microsoft SQL Server, SQL, Prisma ORM, REST APIs, Postman, DBeaver, Docker, Git, GitHub, debugging, and technical documentation.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education" id="education">
+        <div class="container">
+          <div class="section-heading reveal"><p class="section-label">05 / Education</p><h2>Learning that keeps moving forward.</h2></div>
+          <div class="education-grid">
+            <article class="education-card featured-education reveal"><div class="education-year">Expected Apr 2027</div><p class="education-type">Bachelor’s degree · In progress</p><h3>Computer Science</h3><p>Galen University</p></article>
+            <article class="education-card reveal"><div class="education-year">Completed</div><p class="education-type">Associate degree</p><h3>Information Technology</h3><p>Wesley Junior College</p></article>
+            <article class="education-card reveal"><div class="education-year">2021 — 2022</div><p class="education-type">Undergraduate study</p><h3>Information Technology</h3><p>St. John’s College Junior College</p></article>
+            <article class="education-card reveal"><div class="education-year">2017 — 2021</div><p class="education-type">Diploma</p><h3>Science Department</h3><p>Toledo Community College</p></article>
+          </div>
+          <div class="certifications reveal">
+            <div><p class="section-label">Certifications</p><h3>Focused development training</h3></div>
+            <div class="cert-list">
+              <article><time datetime="2026-01">January 2026</time><h4>Web Development</h4><p>Galen Institute for Leadership and Lifelong Learning</p></article>
+              <article><time datetime="2025-12">December 2025</time><h4>Web &amp; Mobile Development · React</h4><p>Rhics UK, Chamberlain Consulting &amp; Social Digital</p><a href="images/Certificate.pdf" target="_blank" rel="noopener">View certificate <span aria-hidden="true">↗</span></a></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container contact-grid reveal">
+          <div><p class="section-label">06 / Contact</p><h2>Let’s build something useful.</h2><p>I’m always interested in opportunities to solve meaningful technical problems, learn, and contribute to a strong team.</p></div>
+          <div class="contact-links">
+            <a href="mailto:mclaughlinkyan04@gmail.com"><span>Email</span><strong>mclaughlinkyan04@gmail.com</strong><b aria-hidden="true">↗</b></a>
+            <a href="tel:+5016564291"><span>Phone</span><strong>+501 656-4291</strong><b aria-hidden="true">↗</b></a>
+            <div><span>Location</span><strong>Belize City, Belize</strong></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container"><p>Designed &amp; built by Kyan McLaughlin</p><p>References available upon request · <span id="currentYear"></span></p></div></footer>
+    <dialog class="lightbox" id="lightbox" aria-label="Project image preview">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close preview">×</button>
+      <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">←</button>
+      <figure><img id="lightboxImage" src="" alt="" /><figcaption><span id="lightboxCaption"></span><span id="lightboxCounter"></span></figcaption></figure>
+      <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">→</button>
+    </dialog>
   </body>
 </html>
